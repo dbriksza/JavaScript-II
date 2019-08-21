@@ -37,19 +37,33 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   const test2 = firstItem(items, logExorbitantPrice);
   console.log(test2); // "this Pencil is worth a million dollars!"
 */
-
+function spicy(article){
+  return article;
+}
 
 function getLength(arr, cb) {
   return cb(arr.length);
 }
 
+const length = getLength(items, spicy)
+
+console.log(length)
+
 function last(arr, cb) {
-  return cb(arr[-1]);
+  return cb(arr[arr.length-1]);
 }
+
+const lasty = last(items, spicy);
+
+console.log(lasty);
 
 function sumNums(x, y, cb) {
   return cb(x+y);
 }
+
+const sum = sumNums(1,2,spicy);
+
+console.log(sum);
 
 function multiplyNums(x, y, cb) {
   return cb(x,y);
@@ -61,6 +75,10 @@ function contains(item, list, cb) {
   });
   return result;
 }
+
+const contain = contains('Notebook', items, spicy)
+
+console.log(contain);
 
 /* STRETCH PROBLEM */
 
