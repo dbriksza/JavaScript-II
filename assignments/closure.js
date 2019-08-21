@@ -3,8 +3,23 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
-
-
+function parent(){
+  const name = "Granny";
+  const greetings = " Yerrrrrr";
+  const goodbye = " Later daddio";
+  console.log(name + goodbye);
+  function child(){
+    const name = "GOB";
+    console.log(name,goodbye);
+    function grandchild(){
+      const name = "LittyMcLitterson";
+      console.log(name,greetings);
+    }
+    grandchild();
+  }
+  child();
+}
+parent();
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
